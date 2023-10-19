@@ -85,7 +85,7 @@ app.get("/filtredPets",function(req,res){
   console.log(min,max);
   const filtredPets=pets.filter(pet=>pet.age>min&&pet.age<max);
   console.log(filtredPets);
-  res.send(filtredPets)
+  res.send(filtredPets);
 })
 
 
