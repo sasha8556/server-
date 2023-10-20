@@ -87,7 +87,10 @@ app.get("/filtredPets",function(req,res){
   const filtredPets=pets.filter(pet=>pet.age>min&&pet.age<max);
   console.log(filtredPets);
   res.send(filtredPets);
-})
+});
+
+console.log(process.env.SECRET_MESSAGE);
+console.log(process.env.TOKEN);
 
 
 
