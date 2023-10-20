@@ -89,8 +89,8 @@ app.get("/filtredPets",function(req,res){
   res.send(filtredPets);
 });
 
-console.log(process.env.SECRET_MESSAGE);
-console.log(process.env.TOKEN);
+// console.log(process.env.SECRET_MESSAGE);
+// console.log(process.env.TOKEN);
 
 
 
