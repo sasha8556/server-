@@ -1,12 +1,12 @@
 {
-  "name": "task1",
+  "name": "index",
   "version": "1.0.0",
   "description": "my first task",
-  "main": "task1.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon task1.js",
-    "start": "node task1.js",
-    "start:dev":"NODE_ENV=TEST node task1.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "start:dev":"NODE_ENV=TEST node index.js",
     "test":"echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alexandra Belonozhko",
