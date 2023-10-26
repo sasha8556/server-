@@ -1,0 +1,38 @@
+[
+   {
+      "id": 1,
+      "name": "Archi",
+      "age": 10,
+      "breed": "dog"
+   },
+   {
+      "id": 3,
+      "name": "asd",
+      "age": 222220,
+      "breed": "BAG"
+   },
+   {
+      "id": 1,
+      "name": "Archi",
+      "age": 10,
+      "isMan": true
+   },
+   {
+      "id": 4,
+      "name": "Kat",
+      "age": 10,
+      "isMan": false
+   },
+   {
+      "id": 5,
+      "name": "Lola",
+      "age": 10,
+      "isMan": false
+   },
+   {
+      "id": 6,
+      "name": "Kin",
+      "age": 10,
+      "isMan": true
+   }
+]
