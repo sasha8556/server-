@@ -50,16 +50,6 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
-router.get("/:gender", async (req, res) => {
-  try {
-    const gender = req.params.gender;
-    const filterPets = await PetsControllers.foundPetsByGender(gender);
-    res.send(filterPets);
-  } catch (error) {
-    console.log("Error");
-  }
-});
-
 router.get("/filtredPets", async (req, res) => {
   try {
     let min = +req.query.min;
@@ -70,5 +60,17 @@ router.get("/filtredPets", async (req, res) => {
     console.log("Error");
   }
 });
+
+router.get("/:gender", async (req, res) => {
+  try {
+    const gender = req.params.gender;
+    const filterPets = await PetsControllers.foundPetsByGender(gender);
+    res.send(filterPets);
+  } catch (error) {
+    console.log("Error");
+  }
+});
+
+
 
 module.exports = router;

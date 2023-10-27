@@ -160,6 +160,7 @@ class PetsServices {
           reject(error);
         } else {
           const obj = JSON.parse(data);
+          console.log(obj);
           const filtredPets = obj.filter(
             (pet) => pet.age > min && pet.age < max
           );
