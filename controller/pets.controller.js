@@ -25,9 +25,13 @@ class PetsControllers {
     return updatedPets;
   }
 
-  async foundPetsByGender(gender){
-    const filterPets=await PetsService.foundPetsByGender(gender);
+  async foundPetsByGender(gender) {
+    const filterPets = await PetsService.foundPetsByGender(gender);
     return filterPets;
+  }
+  async foundPetsByAge(min, max) {
+    const filtredPets = await PetsService.foundPetsByAge(min, max);
+    return filtredPets;
   }
 }
 

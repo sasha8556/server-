@@ -2,25 +2,25 @@
    {
       "id": 1,
       "name": "Archi",
-      "age": 10,
-      "breed": "dog"
+      "age": 8,
+      "isMan": true
+   },
+   {
+      "id": 2,
+      "name": "Bublik",
+      "age": 1,
+      "isMan": true
    },
    {
       "id": 3,
-      "name": "asd",
-      "age": 222220,
-      "breed": "BAG"
-   },
-   {
-      "id": 1,
-      "name": "Archi",
+      "name": "Klim",
       "age": 10,
       "isMan": true
    },
    {
       "id": 4,
       "name": "Kat",
-      "age": 10,
+      "age": 3,
       "isMan": false
    },
    {

@@ -9,7 +9,6 @@ router.get("/", async (req, res) => {
   } catch (error) {
     console.log("Error");
   }
-
 });
 
 router.post("/create", async (req, res) => {
@@ -39,7 +38,6 @@ router.patch("/update/:id", async (req, res) => {
   } catch (error) {
     console.log("Error");
   }
-
 });
 
 router.delete("/delete/:id", async (req, res) => {
@@ -52,11 +50,25 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
+router.get("/:gender", async (req, res) => {
+  try {
+    const gender = req.params.gender;
+    const filterPets = await PetsControllers.foundPetsByGender(gender);
+    res.send(filterPets);
+  } catch (error) {
+    console.log("Error");
+  }
+});
 
-router.get("/pets/:gender", async (req, res) =>{
-      const gender = req.params.gender;
-      const filterPets = await PetsControllers.foundPetsByGender(gender);
-      res.send(filterPets);
-    });
+router.get("/filtredPets", async (req, res) => {
+  try {
+    let min = +req.query.min;
+    let max = +req.query.max;
+    const filtredPets = await PetsControllers.foundPetsByAge(min, max);
+    res.send(filtredPets);
+  } catch (error) {
+    console.log("Error");
+  }
+});
 
 module.exports = router;

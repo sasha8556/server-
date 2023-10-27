@@ -72,15 +72,15 @@ module.exports = router;
   
   
   
-//   // 7) GET /filtredPets?min=1&max=10
-//   // ( возвращает всех пользователей чей возраст попадает в диапaзон)
+  // 7) GET /filtredPets?min=1&max=10
+  // ( возвращает всех пользователей чей возраст попадает в диапaзон)
   
-//   app.get("/filtredPets",function(req,res){
-//     let min=+req.query.min;
-//     let max=+req.query.max;
-//     console.log(min,max);
-//     const filtredPets=pets.filter(pet=>pet.age>min&&pet.age<max);
-//     console.log(filtredPets);
-//     res.send(filtredPets);
-//   });
+  // app.get("/filtredPets",function(req,res){
+  //   let min=+req.query.min;
+  //   let max=+req.query.max;
+  //   console.log(min,max);
+  //   const filtredPets=pets.filter(pet=>pet.age>min&&pet.age<max);
+  //   console.log(filtredPets);
+  //   res.send(filtredPets);
+  // });
   

@@ -1,5 +1,3 @@
-const { rejects } = require("assert");
-const { error } = require("console");
 const fs = require("fs");
 
 class PetsServices {
@@ -134,24 +132,45 @@ class PetsServices {
     });
   }
 
-  foundPetsByGender(gender){
-    return new Promise((resolve,reject)=>{
-      fs.readFile("data.json","utf8",(error,data)=>{
+  foundPetsByGender(gender) {
+    return new Promise((resolve, reject) => {
+      fs.readFile("data.json", "utf8", (error, data) => {
         if (error) {
-          reject(error)
-        }else{
-          const obj=JSON.parse(data);
-          console.log(data);
-         const filtredPets= obj.filter(pets=> (pets.isMan&&gender=== "M") || (!pets.isMan && gender==="F"));
-         console.log(filtredPets);
-         if(filtredPets.length===0){
-          reject("Массив пустой")
-         }else{
-          resolve(filtredPets)
-         }
+          reject(error);
+        } else {
+          const obj = JSON.parse(data);
+          const filtredPets = obj.filter(
+            (pets) =>
+              (pets.isMan && gender === "M") || (!pets.isMan && gender === "F")
+          );
+          if (filtredPets.length === 0) {
+            reject("Массив пустой");
+          } else {
+            resolve(filtredPets);
+          }
         }
-      })
-    })
+      });
+    });
+  }
+
+  foundPetsByAge(min, max) {
+    return new Promise((resolve, reject) => {
+      fs.readFile("data.json", "utf8", (error, data) => {
+        if (error) {
+          reject(error);
+        } else {
+          const obj = JSON.parse(data);
+          const filtredPets = obj.filter(
+            (pet) => pet.age > min && pet.age < max
+          );
+          if (filtredPets.length === 0) {
+            reject("Массив пустой");
+          } else {
+            resolve(filtredPets);
+          }
+        }
+      });
+    });
   }
 }
 
