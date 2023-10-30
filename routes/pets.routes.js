@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     const pets = await PetsControllers.getPets();
     res.send(pets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -16,7 +16,7 @@ router.post("/create", async (req, res) => {
     const newPets = await PetsControllers.createPets(req.body);
     res.send(newPets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -26,7 +26,7 @@ router.put("/edit/:id", async (req, res) => {
     const editPets = await PetsControllers.editPets(id, req.body);
     res.send(editPets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -36,7 +36,7 @@ router.patch("/update/:id", async (req, res) => {
     const newPet = await PetsControllers.updatedPets(idPet, req.body);
     res.send(newPet);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -46,7 +46,7 @@ router.delete("/delete/:id", async (req, res) => {
     const updatedPets = await PetsControllers.deletePets(id);
     res.send(updatedPets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -57,7 +57,7 @@ router.get("/filtredPets", async (req, res) => {
     const filtredPets = await PetsControllers.foundPetsByAge(min, max);
     res.send(filtredPets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
@@ -67,7 +67,7 @@ router.get("/:gender", async (req, res) => {
     const filterPets = await PetsControllers.foundPetsByGender(gender);
     res.send(filterPets);
   } catch (error) {
-    console.log("Error");
+    Sentry.captureException(error);
   }
 });
 
