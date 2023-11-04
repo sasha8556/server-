@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const PetsControllers = require("../controller/pets.controller");
+const Sentry = require("@sentry/node");
 
 router.get("/", async (req, res) => {
   try {
@@ -14,6 +15,7 @@ router.get("/", async (req, res) => {
 router.post("/create", async (req, res) => {
   try {
     const newPets = await PetsControllers.createPets(req.body);
+    a+q;
     res.send(newPets);
   } catch (error) {
     Sentry.captureException(error);
@@ -70,7 +72,5 @@ router.get("/:gender", async (req, res) => {
     Sentry.captureException(error);
   }
 });
-
-
 
 module.exports = router;

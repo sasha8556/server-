@@ -34,5 +34,11 @@
       "name": "Kin",
       "age": 10,
       "isMan": true
+   },
+   {
+      "id": 7,
+      "name": "Krik",
+      "age": 4,
+      "isMan": true
    }
 ]
