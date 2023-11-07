@@ -47,18 +47,18 @@ router.get("/", async (req, res) => {
  * @swagger
  * /api/pets/create:
  *    post:
- *      summary: Create new message
- *      description: Create new message
- *    parameters:
- *      - name: pet
- *        in: body
- *        required: false
- *        schema:
- *          type: object
- *          example: {"id": 1,"name": "Rikki", "age": 7,"isMAn": true}
- *    responses:
- *      '201':
- *        description: Successfully created message
+ *      summary: Create a new pet
+ *      description: Create a new pet.
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              example: {"id": 1, "name": "Rikki", "age": 7, "isMan": true}
+ *      responses:
+ *        '201':
+ *          description: Successfully created pet
  */
 
 
@@ -72,35 +72,35 @@ router.post("/create", async (req, res) => {
   }
 });
 
-
 /**
  * @swagger
  * /api/pets/edit/{id}:
  *    put:
- *      summary: Create new message
- *      description: Create new message
- *    parameters:
- *      - name: message
- *        in: body
- *        required: false
- *        schema:
- *          type: object
- *          example: {"id": 1,"name": "Rikki", "age": 7,"isMAn": true}
- *      - in: path
- *        name: id
- *        required: true
- *        schema:
- *          type: integer
- *    responses:
- *       201:
- *        description: Successfully created message
- *       400:
- *         description: Bad request. Please check your input data.
- *       404:
- *         description: Message with the specified ID not found.
- *       500:
- *         description: Internal server error. Please try the request again later.
+ *      summary: Update a pet
+ *      description: Update an existing pet.
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          required: true
+ *          schema:
+ *            type: integer
+ *        - in: body
+ *          name: pet
+ *          required: false
+ *          schema:
+ *            type: object
+ *            example: {"id": 1, "name": "UpdatedName", "age": 8, "isMan": false}
+ *      responses:
+ *        '201':
+ *          description: Successfully updated pet
+ *        '400':
+ *          description: Bad request. Please check your input data.
+ *        '404':
+ *          description: Pet with the specified ID not found.
+ *        '500':
+ *          description: Internal server error. Please try the request again later.
  */
+
 
 router.put("/edit/:id", async (req, res) => {
   try {

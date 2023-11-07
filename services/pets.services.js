@@ -17,13 +17,14 @@ class PetsServices {
   createPets(newPet) {
     return new Promise((resolve, reject) => {
       let data = fs.readFile("data.json", "utf8", function (error, data) {
-        console.log(data);
+        // console.log(data);
         if (error) {
           reject(error);
         } else {
           const obj = JSON.parse(data);
           console.log(obj);
           obj.push(newPet);
+          console.log(obj);
           fs.writeFile(
             "data.json",
             JSON.stringify(obj, null, 3),

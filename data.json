@@ -41,6 +41,10 @@
       "age": 4,
       "isMan": true
    },
-   {},
-   {}
+   {
+      "id": 10,
+      "name": "Kaka",
+      "age": 7,
+      "isMan": true
+   }
 ]
