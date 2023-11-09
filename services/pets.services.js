@@ -108,21 +108,25 @@ class PetsServices {
   }
 
   deletePets(id) {
-    return new Promise((resolve, rejects) => {
+    return new Promise((resolve, reject) => {
       fs.readFile("data.json", "utf8", (error, data) => {
         if (error) {
-          rejects(error);
+          reject(error);
         } else {
           const obj = JSON.parse(data);
           const index = obj.findIndex((i) => i.id === id);
-          obj.splice(index, 1);
+          if (index === -1) {
+            reject("Индекс не найден");
+          } else {
+            obj.splice(index, 1);
+          }
           fs.writeFile(
             "data.json",
             JSON.stringify(obj, null, 3),
             "utf8",
             (error) => {
               if (error) {
-                rejects(error);
+                reject(error);
               } else {
                 resolve(obj);
               }

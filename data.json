@@ -2,49 +2,31 @@
    {
       "id": 1,
       "name": "Archi",
-      "age": 8,
+      "age": 1,
       "isMan": true
    },
    {
       "id": 2,
       "name": "Bublik",
-      "age": 1,
+      "age": 2,
       "isMan": true
-   },
-   {
-      "id": 3,
-      "name": "Klim",
-      "age": 10,
-      "isMan": true
-   },
-   {
-      "id": 4,
-      "name": "Kat",
-      "age": 3,
-      "isMan": false
    },
    {
       "id": 5,
-      "name": "Lola",
-      "age": 10,
+      "name": "Masha",
+      "age": 7,
       "isMan": false
    },
    {
       "id": 6,
-      "name": "Kin",
-      "age": 10,
-      "isMan": true
-   },
-   {
-      "id": 7,
-      "name": "Krik",
+      "name": "Almas",
       "age": 4,
       "isMan": true
    },
    {
-      "id": 10,
-      "name": "Kaka",
-      "age": 7,
-      "isMan": true
+      "id": 7,
+      "name": "Gessy",
+      "age": 6,
+      "isMan": false
    }
 ]
