@@ -258,7 +258,7 @@ router.put(
  *          application/json:
  *            schema:
  *              type: object
- *              example: {"name": "UpdatedName"}
+ *              example: {"id": 1, "name": "UpdatedName", "age": 8, "isMan": false}
  *      responses:
  *        '201':
  *          description: Successfully updated pet

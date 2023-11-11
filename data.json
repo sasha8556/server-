@@ -12,9 +12,9 @@
       "isMan": true
    },
    {
-      "id": 5,
-      "name": "Masha",
-      "age": 7,
+      "id": 3,
+      "name": "Kat",
+      "age": 8,
       "isMan": false
    },
    {
@@ -24,9 +24,9 @@
       "isMan": true
    },
    {
-      "id": 7,
-      "name": "Gessy",
-      "age": 6,
-      "isMan": false
+      "id": "7",
+      "name": "Fil",
+      "age": "6",
+      "isMan": "true"
    }
 ]
