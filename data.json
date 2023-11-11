@@ -18,15 +18,45 @@
       "isMan": false
    },
    {
-      "id": 6,
+      "id": 4,
       "name": "Almas",
       "age": 4,
       "isMan": true
    },
    {
-      "id": "7",
-      "name": "Fil",
-      "age": "6",
-      "isMan": "true"
+      "id": 5,
+      "name": "Sam",
+      "age": 4,
+      "isMan": true
+   },
+   {
+      "id": 6,
+      "name": "Sara",
+      "age": 6,
+      "isMan": false
+   },
+   {
+      "id": 7,
+      "name": "Belka",
+      "age": 7,
+      "isMan": false
+   },
+   {
+      "id": 8,
+      "name": "Patrick",
+      "age": 5,
+      "isMan": true
+   },
+   {
+      "id": 9,
+      "name": "Oskar",
+      "age": 3,
+      "isMan": true
+   },
+   {
+      "id": 10,
+      "name": "Gerda",
+      "age": 6,
+      "isMan": false
    }
 ]
